@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylePokemon.css">
+    <title>Pokemon</title>
+</head>
+
+<body>
+
+    <div id="searchPokemon"> 
+        <form onsubmit="getPokemon(event)">
+            
+            <input id="pokemonSearch" type="text" placeholder="Search Pokemon">
+            
+        </form>
+    </div>
+
+    <div id="pokemon">
+
+        <div id="pokemonIdentity">
+        <div id="number">
+        <h1 id="pokedex">#<span id="dexNumber"></span></h1>
+        <h1 id="pokemonTitle"></h1>
+        <div id="type" style="display: none;">
+            <p>Type: <span id="pokemonType"></span>;<span id="pokemonType1"></span></p>
+            
+        </div>
+        </div>
+            </div>
+
+        
+
+    <div id="pokemonContainer">
+        <div id="typeContainer">
+        <div id="imagensMale" style="display: none;">
+            <p></p>
+                <div id="mainImage">
+
+            <img id="pokemonSprite">
+            <div id="sparkEffect"></div>
+        </div>
+                </div> 
+                    </div>
+
+        
+    </div>
+
+    <div id="pokemonHover" class="hover-box">
+        <div class="hover-content">
+          <div id="stats">      
+            <div id="abilities">
+            <p>Ability: <span id="ability"></span></p>
+            </div>
+            <div id="hiddenAbilityBlock" style="display: none;">
+                <p>Hidden Ability: <span id="hiddenAbility"></span></p>
+            </div>
+    
+            <div class="stats-container">
+                <div class="stat">
+                  <span class="stat-name">HP</span>
+                  <div class="stat-bar-container">
+                    <div id="hp" class="stat-bar"></div>
+                  </div>
+                </div>
+              
+                <div class="stat">
+                  <span class="stat-name">Attack</span>
+                  <div class="stat-bar-container">
+                    <div id="atk" class="stat-bar"></div>
+                  </div>
+                </div>
+              
+                <div class="stat">
+                  <span class="stat-name">Defense</span>
+                  <div class="stat-bar-container">
+                    <div id="def" class="stat-bar"></div>
+                  </div>
+                </div>
+              
+                <div class="stat">
+                  <span class="stat-name">Sp. Attack</span>
+                  <div class="stat-bar-container">
+                    <div id="spAtk" class="stat-bar"></div>
+                  </div>
+                </div>
+              
+                <div class="stat">
+                  <span class="stat-name">Sp. Defense</span>
+                  <div class="stat-bar-container">
+                    <div id="spDef" class="stat-bar"></div>
+                  </div>
+                </div>
+              
+                <div class="stat">
+                  <span class="stat-name">Speed</span>
+                  <div class="stat-bar-container">
+                    <div id="speed" class="stat-bar"></div>
+                  </div>
+                </div>
+              </div>     
+            </div>
+            
+                
+                <div id="cries">
+                    <audio id="soundCryLatest"></audio>
+                    <button id="playSoundLatest">Latest Cry</button>
+                <div id="criesLegacy" style="display: none;">
+                    <audio id="soundCryLegacy"></audio>
+                    <button id="playSoundLegacy">Legacy Cry</button>
+                </div>
+                </div>
+                
+
+            <div class="hover-right" id="imagensFemale" style="display: none;">
+                <div id="secondarySprites">
+                <p>♀</p>         
+                <img id="pokemonImageFrontDefaultFemale">
+                
+                <img id="pokemonImageFrontShinyFemale">
+                </div>
+            </div>
+
+        
+
+      
+        
+    </div>
+</div>
+    <script src="RequisicaoPokemon.js"></script>
+
+    </div>
+</body>
+</html>

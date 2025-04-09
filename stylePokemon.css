@@ -1,0 +1,395 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+    color: #e0e0e0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #121212;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    text-align: center;
+}
+
+#pokemon {
+    text-align: center;
+}
+
+#searchPokemon {
+  margin: 30px;
+    text-align: center;
+    pointer-events: auto;
+    z-index: 3;
+    position: absolute;
+}
+
+#playSoundLatest {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    font-size: 14px;
+    border: 1.5px solid;
+    border-radius: 9999px;
+    background-color: transparent;
+    cursor: default;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    color: #a0ffb4;
+    border-color: #33cc77;
+  }
+  
+  #playSoundLatest span {
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  #playSoundLatest {
+    border-color: #e60012;
+    color: #ff4554;
+  }
+  
+ #playSoundLatest:hover {
+    background-color: #414548;
+  }
+
+  #playSoundLegacy {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    font-size: 14px;
+    border: 1.5px solid;
+    border-radius: 9999px;
+    background-color: transparent;
+    cursor: default;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    color: #a0ffb4;
+    border-color: #33cc77;
+  }
+  
+  #playSoundLegacy span {
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  #playSoundLegacy {
+    border-color: #9bbc0f;
+    color: #8bac0f;
+  }
+  
+  #playSoundLegacy:hover {
+    background-color: rgba(51, 204, 119, 0.1);
+  }
+
+  #pokemonContainer {
+    position: relative;
+    bottom: 0px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease;
+    border-radius: 20px;
+  }
+
+  #mainImage {
+    max-width: 250px;
+    height: auto;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  
+ 
+
+  #mainImage img {
+    width: 250px;
+    height: auto;
+    
+    border-radius: 8px;
+    padding: 4px;
+  }
+  
+
+
+  #searchPokemon {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.08); /* cor escura translúcida */
+    border-radius: 999px;
+    padding: 8px 16px;
+    width: 250px;
+    height: 40px;
+  }
+  
+  #searchPokemon input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 20px;
+    width: 100%;
+  }
+  
+  #searchPokemon input::placeholder {
+    color: #aaa;
+  }
+
+ #typeContainer {
+   
+    width: 600px;
+  height: 600px;
+  display: flex;
+  justify-content: center;    /* horizontal */
+  align-items: center;    /* vertical (topo) */
+  border-radius: 80%;         /* circular */
+  margin: 10px;
+  padding: 20px;
+  transition: background 0.4s ease;
+  overflow: hidden;
+  vertical-align: 10px;
+  }
+
+  .type-grass {
+    background: radial-gradient(circle at center, #7AC74C 0%, transparent 70%);
+  }
+.type-fire {
+    background: radial-gradient(circle at center, #EE8130 0%, transparent 70%);
+  }
+.type-water {
+    background: radial-gradient(circle at center, #6390F0 0%, transparent 70%);
+  }
+.type-electric {
+    background: radial-gradient(circle at center, #F7D02C 0%, transparent 70%);
+  }
+  .type-poison {
+    background: radial-gradient(circle at center, #A33EA1 0%, transparent 70%);
+  }
+.type-bug {
+    background: radial-gradient(circle at center, #A6B91A 0%, transparent 70%);
+  }
+.type-normal {
+    background: radial-gradient(circle at center, #A8A77A 0%, transparent 70%);
+  }
+  .type-ice {
+    background: radial-gradient(circle at center, #96D9D6 0%, transparent 70%);
+  }
+  .type-fighting {
+    background: radial-gradient(circle at center, #C22E28 0%, transparent 70%);
+  }
+.type-ground {
+  background: radial-gradient(circle at center, #E2BF65 0%, transparent 70%);
+}
+.type-flying {
+    background: radial-gradient(circle at center, #A98FF3 0%, transparent 70%);
+  }
+  .type-psychic {
+    background: radial-gradient(circle at center, #F95587 0%, transparent 70%);
+  }
+  .type-rock {
+    background: radial-gradient(circle at center, #B6A136 0%, transparent 70%);
+  }
+  .type-ghost {
+    background: radial-gradient(circle at center, #735797 0%, transparent 70%);
+  }
+  .type-dragon {
+    background: radial-gradient(circle at center, #6F35FC 0%, transparent 70%);
+  }
+  .type-dark {
+    background: radial-gradient(circle at center, #443429 0%, transparent 70%);
+  }
+  .type-steel {
+    background: radial-gradient(circle at center, #B7B7CE 0%, transparent 70%);
+  }
+  .type-fairy {
+    background: radial-gradient(circle at center, #D685AD 0%, transparent 70%);
+  }
+
+  #pokemonIdentity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2; /* Camada superior */
+    width: 100%;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    pointer-events: auto; /* Permite cliques nas infos */
+  }
+
+  #pokemonTitle {
+    text-transform: uppercase;
+  font-weight: bold;
+  }
+
+ 
+  
+  #sparkEffect {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    pointer-events: none;
+    z-index: 2;
+    display: none;
+  }
+  
+  .spark {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: -125px;
+    left: 125px;
+    background: radial-gradient(circle, rgb(247, 202, 79), transparent);
+    border-radius: 50%;
+    animation: sparkle 1s ease-out forwards;
+  }
+  
+  @keyframes sparkle {
+    0% {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(var(--x), var(--y)) scale(0.3);
+    }
+  }
+
+  .hover-box {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    bottom: -100%;
+    left: 0;
+    height: 400px;
+    width: 100%;
+    max-height: 60%;
+    background: rgba(10, 10, 10, 0.75);
+    backdrop-filter: blur(10px);
+    color: white;
+    border-radius: 20px 20px 0 0;
+    padding: 6px;
+    box-shadow: 0 -4px 15px rgba(59, 59, 59, 0.3);
+    transition: bottom 0.4s ease-out;
+    z-index: 9999;
+    overflow-y: auto; 
+  }
+  
+  .hover-box.active {
+    bottom: 0;
+  }
+
+  #secondarySprites img {
+    width: 160px;
+    object-fit: contain;
+    background-color: #1c1c1c;
+    border-radius: 12px;
+
+  }
+
+  #stats {
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    left: 0px;
+    top: 100px;
+    color: white;
+    font-weight: bold;
+    z-index: 3;
+    display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  text-align: left;
+  }
+  
+  .hover-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .hover-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  flex-wrap: nowrap;
+  gap: 0px;
+  flex-direction: row;
+  justify-content: space-around;
+  }
+
+  #cries {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+
+  align-self: center;
+  }
+  
+  .stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
+  
+  .stat {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .stat-name {
+    font-weight: bold;
+    color: white;
+    margin-bottom: 4px;
+  }
+  
+  .stat-bar-container {
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 14px;
+    width: 100%;
+  }
+  
+  .stat-bar {
+    height: 100%;
+    width: 0;
+    transition: width 0.6s ease-in-out;
+    border-radius: 8px;
+  }
+  
+  .stat-bar.low {
+    background-color: #e53935; /* vermelho para stats < 100 */
+  }
+  
+  .stat-bar.high {
+    background-color: #43a047; /* verde para stats >= 100 */
+  }
+  
+
+ 
